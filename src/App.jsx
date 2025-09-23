@@ -2,6 +2,19 @@ import { useEffect, useState } from "react";
 import * as Sentry from "@sentry/react";
 import "./App.css";
 
+// Add this button component to your app to test Sentry's error tracking
+function ErrorButton() {
+  return (
+    <button
+      onClick={() => {
+        throw new Error("This is your first error!");
+      }}
+    >
+      Break the world
+    </button>
+  );
+}
+
 function App() {
   const [dots, setDots] = useState(".");
 
@@ -21,13 +34,7 @@ function App() {
 
   return (
     <>
-      <button
-        onClick={() => {
-          throw new Error("This is your first error!");
-        }}
-      >
-        error
-      </button>
+      <ErrorButton />
       <p>sentry testing{dots}</p>
     </>
   );
