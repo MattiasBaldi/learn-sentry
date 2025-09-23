@@ -5,11 +5,10 @@ import App from "./App.jsx";
 import * as Sentry from "@sentry/react";
 
 Sentry.init({
-  dsn: "https://examplePublicKey@o0.ingest.sentry.io/0",
-  // Adds request headers and IP for users, for more info visit:
-  // https://docs.sentry.io/platforms/javascript/guides/react/configuration/options/#sendDefaultPii
+  dsn: "https://759f5e5952521fd5055422c37be9eab2@o4510067874398208.ingest.de.sentry.io/4510070944956496",
+  // Setting this option to true will send default PII data to Sentry.
+  // For example, automatic IP address collection on events
   sendDefaultPii: true,
-  integrations: [],
 });
 
 console.warn("test");
