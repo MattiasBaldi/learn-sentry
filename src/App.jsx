@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import * as Sentry from "@sentry/react";
 import "./App.css";
 
-console.log(Sentry);
-
 function ErrorButton() {
   return (
     <button
