@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import * as Sentry from "@sentry/react";
 import "./App.css";
 
-// Add this button component to your app to test Sentry's error tracking
+console.log(Sentry);
+
 function ErrorButton() {
   return (
     <button
       onClick={() => {
+        Sentry.captureMessage("Hello Sentry!");
         throw new Error("This is your first error!");
       }}
     >
